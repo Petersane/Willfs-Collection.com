@@ -2,6 +2,9 @@
   margin: 0;
   padding: 0;
 }
+body{
+  min-height: 100vh;
+}
 
 #sec1{
   background-color: rgb(1, 1, 19);
@@ -14,8 +17,8 @@
   margin-top: 10px;
   border-bottom: 2px solid white;
   border-top: 2px solid white;
-  margin-left: 15px;
-  margin-right: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
 
   
  
@@ -36,7 +39,7 @@
 }
 li{
  list-style: none;
- display:inline-block;
+ display:flex;
  margin-left: 40px;
  margin-right: 20px;
  color:rgb(236, 95, 0);
@@ -47,13 +50,12 @@ li:hover{
   color: white;
   cursor: pointer;
 }
-.li{
-  margin-left: 80px;
- 
-  padding: 5px;
+nav ul{
   display: flex;
-  align-items: center;
-   
+  gap: 15px;
+  font-family: sans-serif;
+  font-size: 12px;
+  
 }
 #a{
   margin-top: 20px;
@@ -62,6 +64,47 @@ li:hover{
     padding-bottom: 10px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+#menuicon{
+  display: none;
+}
+#menuicon i{
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+}
+#menuicon:hover{
+  cursor: pointer;
+
+}
+@media(max-width:600px){
+  #menuList{
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(1, 1, 19);
+    gap: 0;
+    display: none;
+    justify-content: center;
+    
+  }
+
+  nav ul li{
+    padding: 5px;
+   
+  }
+  #menuicon{
+    display: block;
+    
+  }
+}
+
+
+
+
+
 #productdetails{
   display: flex;
   align-content: center;
@@ -87,7 +130,7 @@ nav{
   justify-content: center;
 }
 .rating{
-  font-size: 10px;
+  font-size: 8px;
   color: orangered;
 }
 #shoppingcart{
@@ -101,7 +144,7 @@ nav{
    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 #productprice{
-  font-size: 10px;
+  font-size: 9px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
 }
@@ -110,15 +153,16 @@ nav{
   background-color: orangered;
   color: white;
   border-radius: 5px;
-  padding: 5px;
+  padding: 2px;
   width: 60px;
   border: none;
+  height:12x ;
 }
 #addtocart:hover{
   background-color: white;
   color:orangered;
   cursor: pointer;
-  border: 2px solid orange;
+  border: 1px solid orange;
 }
 footer{
   background-color: rgb(1, 1, 19);
@@ -338,4 +382,34 @@ footer{
    width: 120px;
    height: 120px;
    border-radius: 5px;
+}
+#category{
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+}
+#size{
+  width: 100px;
+  border: 1px solid orange;
+  border-radius: 5px;
+}
+#productpricecancel{
+  text-decoration: line-through;
+  font-size: 8px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#offerbtn{
+  border: none;
+  background-color:rgb(1, 1, 19) ;
+  color: white;
+  font-size: 6px;
+  border-radius: 2px;
+  height: 10px;
+  width: 30px;
+  
+}
+#offerfew{
+  border: none;
+  font-size: 7px;
+  height: 10px;
 }
