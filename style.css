@@ -415,3 +415,29 @@ footer{
   color: red;
   background-color: rgb(2, 1, 1);
 }
+
+#displaylist{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  background-color:rgb(78, 78, 78) ;
+  padding: 10px;
+  
+  
+
+}
+#displaylist li{
+  display: inline-block;
+  color: white;
+  
+}
+#drag{
+  color: white;
+  text-decoration: none;
+}
+#drag:hover{
+  background-color:rgb(151, 151, 151) ;
+  cursor: pointer;
+}
+
