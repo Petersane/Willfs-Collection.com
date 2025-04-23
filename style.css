@@ -2,8 +2,11 @@
   margin: 0;
   padding: 0;
 }
+
+
 body{
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 #sec1{
@@ -15,19 +18,13 @@ body{
 
   align-items: center;
   margin-top: 10px;
- 
- 
-
-  
- 
-
 
 }
 .logo{
   font-family: Arial, Helvetica, sans-serif;
   text-transform: uppercase;
   color: white;
-  margin-right: auto;
+  
  
  
   
@@ -53,6 +50,7 @@ nav ul{
   gap: 15px;
   font-family: sans-serif;
   font-size: 12px;
+  
   
 }
 #a{
@@ -165,6 +163,7 @@ nav{
 footer{
   background-color: rgb(1, 1, 19);
   margin-top: 10px;
+  
 }
 #socialmediaicon{
   color: white;
@@ -394,6 +393,7 @@ footer{
 #productpricecancel{
   text-decoration: line-through;
   font-size: 8px;
+  
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 #offerbtn{
@@ -408,6 +408,10 @@ footer{
 }
 #offerfew{
   border: none;
-  font-size: 7px;
+  font-size: 6px;
   height: 10px;
+  font-family: sans-serif;
+  padding: 2px;
+  color: red;
+  background-color: rgb(2, 1, 1);
 }
