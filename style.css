@@ -473,4 +473,20 @@ footer{
  justify-content: center;
  padding: 5px;
 }
+#shoesgn{
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  flex-direction: row;
+ justify-content: center;
+ padding: 5px;
+}
+#clothesgn{
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  flex-direction: row;
+ justify-content: center;
+ padding: 5px;
+}
 
