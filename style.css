@@ -463,11 +463,11 @@ footer{
   padding: 10px 15px;
   border-radius: 5px;
   text-decoration: none;
-  color: rgb(2, 1, 1);
+  color: white;
 }
 
 #displaylist li a:hover {
-  background: #fff4f4;
+  background: #a8a8a8;
   cursor: pointer;
 }
 #drag{
