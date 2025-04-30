@@ -180,6 +180,10 @@ footer{
 }
 #socialicon:hover{
   color: orangered;
+  cursor: pointer;
+}
+.social{
+  color: white;
 }
 #footerparagraph{
   color: white;
