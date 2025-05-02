@@ -1,12 +1,14 @@
 *{
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
 
 body{
   min-height: 100vh;
   overflow-x: hidden;
+  
 }
 
 #sec1{
@@ -72,6 +74,12 @@ nav ul{
   cursor: pointer;
 
 }
+.CrossMark{
+ font-size: 24px;
+ color: white;  
+ display: none;
+
+}
 @media(max-width:600px){
   #menuList{
     position: absolute;
@@ -84,17 +92,43 @@ nav ul{
     gap: 0;
     display: none;
     justify-content: center;
+
+    
     
   }
+ 
+   
+  nav ul{
+   display:flex;
+   align-items: center;
+   flex-direction: column;
+   justify-content: center;
+   list-style: none;
+  }
+ 
 
   nav ul li{
     padding: 5px;
    
   }
   #menuicon{
-    display: block;
+    display: flex;
     
   }
+  .CrossMark{
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    margin-left: 20px;
+  
+   
+    
+  }
+  .CrossMark:hover{
+    color: red;
+    cursor: pointer;
+  }
+ 
 }
 
 
@@ -132,6 +166,9 @@ nav{
 #shoppingcart{
   margin-right: 20px;
   color: white;
+}
+#shoppingcart:hover{
+  cursor: pointer;
 }
 #productname{
   font-size: 8px;
@@ -327,6 +364,7 @@ footer{
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
 }
 #sec3img{
   width: 250px;
@@ -381,8 +419,8 @@ footer{
 }
 #abtimage{
    width: 120px;
-   height: 120px;
-   border-radius: 5px;
+   height: 180px;
+   border-radius: 1px;
 }
 #category{
   display: flex;
