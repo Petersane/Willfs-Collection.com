@@ -9,12 +9,16 @@ crossMark.addEventListener("click",()=>{
     menuList.style.display="none";
 })
 
-const AddtoCart=document.querySelectorAll("#addtocart");
+const carticon=document.getElementById("shoppingcart");
+const cart=document.querySelector(".cart");
+const cartclose=document.getElementById("cartclose");
+
+    carticon.addEventListener("click", () => cart.classList.add("active"));
+    cartclose.addEventListener("click", () => cart.classList.remove("active"));
+  
 
 
-AddtoCart.addEventListener("click",()=>{
 
-})
 
 
 
