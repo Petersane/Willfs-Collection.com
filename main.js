@@ -16,8 +16,71 @@ const cartclose=document.getElementById("cartclose");
     carticon.addEventListener("click", () => cart.classList.add("active"));
     cartclose.addEventListener("click", () => cart.classList.remove("active"));
   
+const addcartbtns=document.querySelectorAll("#addtocart");
+addcartbtns.forEach(button=>{
+    button.addEventListener("click",event=>{
+        const productbox=event.target.closest("#product");
+        addtocart(productbox);
+    })
+})
 
+const cartcontent=document.querySelector(".cart-content");
 
+const addtocart=productbox=>{
+    const productImgSrc=productbox.querySelector("img").src;
+    const productName=productbox.querySelector("#productname").textContent;
+    const productPrice=productbox.querySelector("#productprice").textContent;
+
+    const cartItems=cartcontent.querySelectorAll(".cart-productname");
+    for(let item of cartItems){
+        if(item.textcontent===productName){
+            alert("This item is already in the cart.");
+            return;
+        }
+    }
+    
+    const cartBox=document.createElement("div");
+    cartBox.classList.add("cart-box");
+    cartBox.innerHTML=`
+        <img src="${productImgSrc}" class="cart-img">
+                <div class="cart-detail">
+                    <h2 class="cart-product-name">
+                        ${productName}
+                    </h2>
+                    <span class="cart-price">${productPrice}</span>
+                    <div class="cart-quantity">
+                        <button id="decrement">-</button>
+                        <span id="number">1</span>
+                        <button id="increment">+</button>
+                    </div>
+                </div>
+                <i class="fa-solid fa-trash cart-remove"></i>
+    `;
+    cartcontent.appendChild(cartBox);
+
+    cartBox.querySelector(".cart-remove").addEventListener("click",()=>{
+        cartBox.remove();
+    })
+    cartBox.querySelector(".cart-quantity").addEventListener("click",event=>{
+        const numberElement=cartBox.querySelector("#number");
+        const decrementbtn=cartBox.querySelector("#decrement");
+        let quantity=numberElement.textContent;
+
+        if(event.target.id==="decrement" && quantity > 1 ){
+            quantity--;
+            if(quantity===1){
+                decrementbtn.style.color="#999";
+            }
+            else if(event.target.id==="increment"){
+                quantity++;
+                decrementbtn.style.color="#333";
+
+            }
+            numberElement.textContent=quantity;
+        }
+
+    })
+}
 
 
 
