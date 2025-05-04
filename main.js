@@ -16,7 +16,119 @@ const cartclose=document.getElementById("cartclose");
     carticon.addEventListener("click", () => cart.classList.add("active"));
     cartclose.addEventListener("click", () => cart.classList.remove("active"));
   
-const addcartbtns=document.querySelectorAll("#addtocart");
+
+const addcartbtns = document.querySelectorAll("#addtocart");
+addcartbtns.forEach(button => {
+    button.addEventListener("click", event => {
+        const productbox = event.target.closest("#product");
+        if (productbox) {
+            addtocart(productbox);
+        }
+    });
+});
+
+const cartcontent = document.querySelector(".cart-content");
+
+const addtocart = productbox => {
+    // Safely get product details
+    const productImg = productbox.querySelector("img");
+    const productNameEl = productbox.querySelector("#productname");
+    const productPriceEl = productbox.querySelector("#productprice");
+    
+    if (!productImg || !productNameEl || !productPriceEl) return;
+
+    const productImgSrc = productImg.src;
+    const productName = productNameEl.textContent.trim();
+    const productPrice = productPriceEl.textContent.trim();
+
+    // Check for duplicates with improved comparison
+    const cartItems = cartcontent.querySelectorAll(".cart-product-name");
+    for (let item of cartItems) {
+        if (item.textContent.trim() === productName) {
+            // Visual feedback instead of alert
+            item.closest('.cart-box').classList.add('duplicate-highlight');
+            setTimeout(() => {
+                item.closest('.cart-box').classList.remove('duplicate-highlight');
+            }, 1000);
+            return;
+        }
+    }
+    
+    // Create cart item
+    const cartBox = document.createElement("div");
+    cartBox.classList.add("cart-box");
+    cartBox.innerHTML = `
+        <img src="${productImgSrc}" class="cart-img" alt="${productName}">
+        <div class="cart-detail">
+            <h2 class="cart-product-name">${productName}</h2>
+            <span class="cart-price">${productPrice}</span>
+            <div class="cart-quantity">
+                <button class="decrement">-</button>
+                <span class="number">1</span>
+                <button class="increment">+</button>
+            </div>
+        </div>
+        <i class="fa-solid fa-trash cart-remove"></i>
+    `;
+    cartcontent.appendChild(cartBox);
+
+    // Setup event listeners
+    setupCartItemEvents(cartBox);
+};
+
+function setupCartItemEvents(cartBox) {
+    // Remove item
+    cartBox.querySelector(".cart-remove").addEventListener("click", () => {
+        cartBox.remove();
+        updateTotalPrice(); 
+    });
+
+    // Quantity controls
+    const numberElement = cartBox.querySelector(".number");
+    const decrementBtn = cartBox.querySelector(".decrement");
+    const incrementBtn = cartBox.querySelector(".increment");
+
+    decrementBtn.addEventListener("click", () => {
+        let quantity = parseInt(numberElement.textContent);
+        if (quantity > 1) {
+            quantity--;
+            numberElement.textContent = quantity;
+            decrementBtn.style.color = quantity === 1 ? "#999" : "#333";
+        }
+        updateTotalPrice(); 
+    });
+
+    incrementBtn.addEventListener("click", () => {
+        let quantity = parseInt(numberElement.textContent) + 1;
+        numberElement.textContent = quantity;
+        decrementBtn.style.color = "#333";
+        updateTotalPrice(); 
+    });
+    updateTotalPrice(); 
+};
+const updateTotalPrice =()=>{
+    const totalPriceElement=document.querySelector(".total-price");
+    const cartBoxes=cartcontent.querySelectorAll(".cart-box");
+    let total = 0;
+    cartBoxes.forEach(cartBox =>{
+        const priceElement =cartBox.querySelector(".cart-price");
+        const quantityElement =cartBox.querySelector(".number");
+        const price =priceElement.textContent.replace("Ksh","");
+        const quantity = quantityElement.textContent;
+        total += price*quantity;
+    })
+    totalPriceElement.textContent=`Ksh ${total}`;
+
+}
+
+
+
+
+
+
+
+
+/*const addcartbtns=document.querySelectorAll("#addtocart");
 addcartbtns.forEach(button=>{
     button.addEventListener("click",event=>{
         const productbox=event.target.closest("#product");
@@ -31,9 +143,9 @@ const addtocart=productbox=>{
     const productName=productbox.querySelector("#productname").textContent;
     const productPrice=productbox.querySelector("#productprice").textContent;
 
-    const cartItems=cartcontent.querySelectorAll(".cart-productname");
+    const cartItems=cartcontent.querySelectorAll(".cart-product-name");
     for(let item of cartItems){
-        if(item.textcontent===productName){
+        if(item.textContent===productName){
             alert("This item is already in the cart.");
             return;
         }
@@ -50,7 +162,7 @@ const addtocart=productbox=>{
                     <span class="cart-price">${productPrice}</span>
                     <div class="cart-quantity">
                         <button id="decrement">-</button>
-                        <span id="number">1</span>
+                        <span class="number">1</span>
                         <button id="increment">+</button>
                     </div>
                 </div>
@@ -61,30 +173,79 @@ const addtocart=productbox=>{
     cartBox.querySelector(".cart-remove").addEventListener("click",()=>{
         cartBox.remove();
     })
-    cartBox.querySelector(".cart-quantity").addEventListener("click",event=>{
-        const numberElement=cartBox.querySelector("#number");
-        const decrementbtn=cartBox.querySelector("#decrement");
-        let quantity=numberElement.textContent;
 
-        if(event.target.id==="decrement" && quantity > 1 ){
+    
+   cartBox.querySelector(".cart-quantity").addEventListener("click",(e)=>{
+        const numberElement=cartBox.querySelector(".number");
+        const decrementbtn = cartBox.querySelector("#decrement");  
+        
+        let quantity = numberElement.textContent; 
+
+
+        if(e.target.id==="decrement" && quantity > 1 ){
             quantity--;
-            if(quantity===1){
+            if(quantity === 1){
                 decrementbtn.style.color="#999";
             }
-            else if(event.target.id==="increment"){
+            else if(e.target.id === "increment"){
                 quantity++;
                 decrementbtn.style.color="#333";
 
             }
-            numberElement.textContent=quantity;
+            
         }
 
-    })
+        numberElement.textContent=quantity;
+    });
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+const numberElement = cartBox.querySelector(".number");
+const decrementbtn = cartBox.querySelector(".decrement");
+const incrementbtn = cartBox.querySelector(".increment");
+
+decrementbtn.addEventListener("click", () => {
+    let quantity = parseInt(numberElement.textContent);
+    if (quantity > 1) {
+        quantity--;
+        numberElement.textContent = quantity;
+        if (quantity === 1) {
+            decrementbtn.style.color = "#999";
+        }
+    }
+});
+
+incrementbtn.addEventListener("click", () => {
+    let quantity = parseInt(numberElement.textContent);
+    quantity++;
+    numberElement.textContent = quantity;
+    decrementbtn.style.color = "#333";
+});
 }
 
 
-
-
+*/
 
 
 

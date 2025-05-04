@@ -542,13 +542,14 @@ footer{
   top: 0;
   right: -100%;
   width:200px;
-  height: 100%;
+  height: 100vh;
   background-color: white;
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
   padding: 65px 20px 40px;
   z-index: 100;
   overflow: auto;
   transition: 0.5s;
+  
 
 }
 .cart.active{
@@ -600,7 +601,7 @@ footer{
 .cart-quantity #decrement{
   color: #999;
 }
-.cart-quantity #number{
+.cart-quantity .number{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -643,4 +644,12 @@ footer{
   right: 15px;
   font-size:35px ;
   cursor: pointer;
+}
+.duplicate-highlight {
+  animation: highlight 1s;
+  border-left: 3px solid red;
+}
+@keyframes highlight {
+  0% { background-color: rgba(255,0,0,0.1); }
+  100% { background-color: transparent; }
 }
