@@ -14,18 +14,21 @@ body{
 #sec1{
   background-color: rgb(1, 1, 19);
 }
-#container{
-  text-align: center;
-  display: flex;
 
-  align-items: center;
+/*NAVBAR STYLING*/
+ nav #container{
+  display: flex;
+  flex-direction: row;
+  
   margin-top: 10px;
 
 }
-.logo{
+ nav .logo{
   font-family: Arial, Helvetica, sans-serif;
   text-transform: uppercase;
   color: white;
+  margin-right: auto;
+  padding-bottom:10px ;
   
  
  
@@ -33,12 +36,12 @@ body{
 }
 .logo:hover{
   cursor: pointer;
+   
 }
 li{
- list-style: none;
- display:flex;
+ 
+ 
  margin-left: 40px;
- margin-right: 20px;
  color:rgb(236, 95, 0);
   
 }
@@ -46,18 +49,35 @@ li:hover{
   background-color: orangered;
   color: white;
   cursor: pointer;
+  list-style-type: none;
 }
 nav ul{
-  display: flex;
+   display: flex;
   gap: 15px;
   font-family: sans-serif;
-  font-size: 12px;
+  font-size: 16px;
+  margin-left: 150px;
+  
   
   
 }
+#shoppingcart{
+  display:flex;
+  justify-content: flex-end;
+  color: white;
+  margin-left: 70px;
+  
+}
+#shoppingcart:hover{
+  cursor: pointer;
+}
+
+
+
 #a{
   margin-top: 20px;
   color: antiquewhite;
+  background-color: rgb(1, 1, 19);
    text-align:center;
     padding-bottom: 10px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -67,13 +87,15 @@ nav ul{
 }
 #menuicon i{
   color: white;
-  font-size: 20px;
-  padding: 10px;
+  font-size: 16px;
+  padding-left: 60px;
+  margin-left: 20px;
 }
 #menuicon:hover{
   cursor: pointer;
 
 }
+
 .CrossMark{
  font-size: 24px;
  color: white;  
@@ -90,8 +112,8 @@ nav ul{
     align-items: center;
     background-color: rgb(1, 1, 19);
     gap: 0;
-    display: none;
-    justify-content: center;
+    
+    
 
     
     
@@ -117,9 +139,11 @@ nav ul{
   }
   .CrossMark{
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+    left: 0;
     padding: 5px;
     margin-left: 20px;
+
     
   
    
@@ -164,13 +188,7 @@ nav{
   font-size: 8px;
   color: orangered;
 }
-#shoppingcart{
-  margin-right: 20px;
-  color: white;
-}
-#shoppingcart:hover{
-  cursor: pointer;
-}
+
 #productname{
   font-size: 8px;
    font-weight: 400;
