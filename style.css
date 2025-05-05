@@ -309,8 +309,8 @@ footer{
 }
 #exclusiveimg{
   height: 200px;
-  width: 200px;
-  border-radius: 5px;
+  width: 150px;
+  border-radius: 1px;
   transition: all 0.3s ease-out;
 }
 #exclusiveimg:hover{
