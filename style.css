@@ -399,7 +399,9 @@ footer{
    margin-top: 5px;
    border-radius: 5px;
    margin-right: 2px;
-
+   
+    box-shadow: 5px 5px 10px 0px rgba(173, 143, 255, 0.308);
+  
 }
 #tell{
   color: rgb(1, 1, 19);
