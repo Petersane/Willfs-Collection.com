@@ -11,6 +11,9 @@ body{
   overflow-x: hidden;
   
 }
+a{
+  text-decoration: none;
+}
 
 #sec1{
   background-color: rgb(1, 1, 19);
@@ -291,15 +294,22 @@ footer{
   height: 320px;
 }
 #explorebtn{
-  background-color:rgb(1, 1, 19);
+  background-color: rgb(4, 4, 29);
   color: white;
   border: none;
-  border-radius: 2px;
-  width: 100px;
+  border-radius: 5px;
+  font-size: 14px;
+  width: 150px;
+  height: 30px;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 #explorebtn:hover{
   cursor: pointer;
   background-color:rgb(119, 119, 119); 
+}
+#explorebtn a{
+  color: white;
 }
 #delivery{
   color: white;
@@ -388,6 +398,13 @@ footer{
   height: 30px;
   margin-bottom: 10px;
   margin-top: 10px;
+}
+.get3 a{
+  color: white;
+}
+.get3:hover{
+  background-color:rgb(44, 44, 77) ;
+  
 }
 #p1{
   display: flex;
