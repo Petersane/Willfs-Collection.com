@@ -293,24 +293,7 @@ footer{
   width: 300px;
   height: 320px;
 }
-#explorebtn{
-  background-color: rgb(4, 4, 29);
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 14px;
-  width: 150px;
-  height: 30px;
-  margin-bottom: 10px;
-  margin-top: 10px;
-}
-#explorebtn:hover{
-  cursor: pointer;
-  background-color:rgb(119, 119, 119); 
-}
-#explorebtn a{
-  color: white;
-}
+
 #delivery{
   color: white;
   font-size: 20px;
