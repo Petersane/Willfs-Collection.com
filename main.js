@@ -80,6 +80,7 @@ function setupCartItemEvents(cartBox) {
     // Remove item
     cartBox.querySelector(".cart-remove").addEventListener("click", () => {
         cartBox.remove();
+        updateCartCount(-1);
         updateTotalPrice(); 
     });
 
@@ -104,6 +105,8 @@ function setupCartItemEvents(cartBox) {
         decrementBtn.style.color = "#333";
         updateTotalPrice(); 
     });
+    updateCartCount(1);
+
     updateTotalPrice(); 
 };
 const updateTotalPrice =()=>{
@@ -119,6 +122,18 @@ const updateTotalPrice =()=>{
     })
     totalPriceElement.textContent=`Ksh ${total}`;
 
+}
+let cartItemCount= 0;
+const updateCartCount= change =>{
+    const cartItemCountBadge=document.querySelector(".cart-item-count");
+    cartItemCount += change;
+    if(cartItemCount > 0){
+        cartItemCountBadge.style.visibilty ="visible";
+        cartItemCountBadge.textContent=cartItemCount;
+    }else{
+        cartItemCountBadge.style.visibilty= "hidden";
+        cartItemCountBadge.textContent="";
+    }
 }
 
 
