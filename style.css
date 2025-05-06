@@ -619,7 +619,39 @@ footer{
   padding-top: 10px;
 }
 
+#sec4{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-image: url(img/shopping\ background.png);
+  background-size: cover;
+}
 
+.sec4title{
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 20px;
+  color: white;
+  
+}
+.sec4paragraph{
+  text-align: center;
+  font-size: 14px;
+  padding: 20px;
+  color: white;
+}
+.sec4button{
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: rgb(1, 1, 19);
+  margin-bottom: 10px;
+}
 
 
 /*PRODUCT*/
