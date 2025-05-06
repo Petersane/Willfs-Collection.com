@@ -656,7 +656,7 @@ footer{
   z-index: 100;
   overflow: auto;
   transition: 0.5s;
-  
+  padding-top: 60px;
 
 }
 .cart.active{
@@ -664,7 +664,7 @@ footer{
 }
 .Cart-title{
   text-align: center;
-  font-size: 24px;
+  font-size: 18px;
 }
 .cart-box{
   display: flex;
@@ -765,8 +765,9 @@ footer{
   position:absolute;
   top: 20px;
   right: 15px;
-  font-size:35px ;
+  font-size:24px ;
   cursor: pointer;
+  padding-top: 30px;
 }
 .duplicate-highlight {
   animation: highlight 1s;
