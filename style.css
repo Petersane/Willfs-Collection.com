@@ -556,7 +556,12 @@ footer{
   background: white;
   display: flex;
   gap: 5px;
-  flex-wrap: wrap;
+  width: 100%;
+  overflow-x: auto; /* Enables horizontal scrolling */
+  white-space: nowrap; /* Prevents line breaks */
+  -webkit-overflow-scrolling: touch;
+  display: flex;
+  align-items: center;
 }
 .trendsdiv{
    
