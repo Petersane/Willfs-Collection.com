@@ -313,6 +313,26 @@ footer{
   font-size: 20px;
   text-align: center;
 }
+.get3{
+ 
+  background-color: rgb(4, 4, 29);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  width: 150px;
+  height: 30px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-left: 100px;
+}
+.get3 a{
+  color: white;
+}
+.get3:hover{
+  background-color:rgb(44, 44, 77) ;
+  
+}
 #fashion{
   color: white;
   font-size: 30px;
@@ -325,7 +345,7 @@ footer{
 #Discount{
   font-size: 20px;
   text-align: center;
- font-weight: 600;
+ font-weight: 400;
   color:rgb(1, 1, 19); 
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
@@ -387,7 +407,7 @@ footer{
   font-size: 16px;
   margin-top: 10px;
 }
-.get3{
+.get32{
  
   background-color: rgb(4, 4, 29);
   color: white;
@@ -398,12 +418,12 @@ footer{
   height: 30px;
   margin-bottom: 10px;
   margin-top: 10px;
-  margin-left: 100px;
+  
 }
-.get3 a{
+.get32 a{
   color: white;
 }
-.get3:hover{
+.get32:hover{
   background-color:rgb(44, 44, 77) ;
   
 }
@@ -521,32 +541,51 @@ footer{
 }
 #secproductname{
   text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 10px;
+  padding: 10px;
 }
-#abtimages{
-  display: flex;
-  flex-direction: row;
-   flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  padding: 20px;
 
-}
-#abtimage{
-   width: 120px;
-   height: 180px;
-   border-radius: 1px;
-}
-#category{
-  display: flex;
-  justify-content: center;
-  padding: 5px;
-}
 #size{
   width: 100px;
   border: 1px solid orange;
   border-radius: 5px;
 }
+.trends{
+  background: white;
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+.trendsdiv{
+   
+  
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  
+  padding: 10px;
+}
+.trendsimg{
+  width: 150px;
+  height: 200px;
+  border-radius: 2px;
+}
+.trendsname{
+  color: rgb(1, 1, 19);
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+
+  
+}
+
+
+
+
+
+/*PRODUCT*/
 #productpricecancel{
   text-decoration: line-through;
   font-size: 8px;
@@ -646,6 +685,8 @@ footer{
  justify-content: center;
  padding: 5px;
 }
+
+
 
 
 
