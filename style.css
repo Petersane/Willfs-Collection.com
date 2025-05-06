@@ -509,8 +509,10 @@ footer{
   display: flex;
   padding: 5px;
   color:white ;
-  font-size: 20px;
+  font-size: 24px;
   text-align: center;
+  font-weight: 800;
+  padding-right: 30px;
 }
 #secproductname{
   text-align: center;
