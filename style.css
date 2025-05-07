@@ -303,6 +303,7 @@ footer{
   font-weight: 600;
   
 }
+
 #exploreimg{
   width: 300px;
   height: 320px;
@@ -444,11 +445,14 @@ footer{
 }
 #tell{
   color: rgb(1, 1, 19);
-  font-size: 20px;
+  font-size: 12px;
+  padding: 5px;
 }
 #free{
-  font-size: 24px;
+  font-size: 16px;
+  font-weight: 600;
   text-align: center;
+  padding: 10px;
 }
 #approach{
   font-size: 10px;
@@ -458,6 +462,10 @@ footer{
   flex-direction: column;
   align-items: center;
   
+}
+.contactno{
+  margin-top: 15px;
+  text-align: center;
 }
 #send{
   background-color: orangered;
