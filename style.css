@@ -286,7 +286,10 @@ footer{
   margin-top: 5px;
 }
 #explore{
-  background-color: rgb(247, 98, 45);
+  background-image: url(img/backgroundimg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -297,7 +300,7 @@ footer{
 }
 #exploreparagraph{
   font-size: 36px;
-  color: rgb(1, 1, 19);
+  color: orangered;
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
   font-weight: 600;
@@ -347,7 +350,7 @@ footer{
   font-size: 20px;
   text-align: center;
  font-weight: 400;
-  color:rgb(1, 1, 19); 
+  color:orangered; 
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 #show{
