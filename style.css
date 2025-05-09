@@ -286,8 +286,9 @@ footer{
   margin-top: 5px;
 }
 #explore{
-  background-image: url(img/backgroundimg.jpg);
+ /* background-image: url(img/backgroundimg.jpg);*/
   background-position: center;
+  background:linear-gradient(to right, white,  orangered);
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -300,7 +301,7 @@ footer{
 }
 #exploreparagraph{
   font-size: 36px;
-  color: orangered;
+  color: rgb(4, 4, 29);
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
   font-weight: 600;
